@@ -49,6 +49,7 @@ RUN rpm --rebuilddb \
 	mariadb \
 	lsof \
 	iproute \
+	cronie \
 	&& rm -rf /var/cache/yum/* \
 	&& yum clean all
 
