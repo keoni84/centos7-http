@@ -48,6 +48,16 @@ RUN rpm --rebuilddb \
 	lsof \
 	iproute \
 	cronie \
+	gcc \
+	glibc \
+	glibc-common \
+	gd \
+	gd-devel \
+	net-snmp \
+	openssl-devel \
+	wget \
+	unzip \
+	make \
 	&& rm -rf /var/cache/yum/* \
 	&& yum clean all
 
