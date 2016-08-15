@@ -1,1 +1,1 @@
-# centos7-ssh
+# centos7-lamp
