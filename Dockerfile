@@ -45,6 +45,8 @@ RUN rpm --rebuilddb \
 	php-xml \
 	php-mcrypt \
 	php-snmp \
+	lsof \
+	iproute \
 	&& rm -rf /var/cache/yum/* \
 	&& yum clean all
 
