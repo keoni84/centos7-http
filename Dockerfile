@@ -55,6 +55,11 @@ RUN rpm --rebuilddb \
 	gd-devel \
 	net-snmp \
 	openssl-devel \
+	perl-IO-Socket-SSL \
+	perl-devel \
+	perl-JSON \
+	perl-HTML \
+	perl-XML-Simple \
 	wget \
 	unzip \
 	make \
