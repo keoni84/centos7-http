@@ -75,7 +75,7 @@ RUN rpm -ivh /tmp/epel-release-7-8.noarch.rpm
 # Install sshpass
 # -----------------------------------------------------------------------------
 RUN rpm --rebuilddb \
-	&& yum -y install sshpass \
+	&& yum -y install sshpass perl-Nagios-Plugin \
 	&& yum -y erase epel-release-7-8 \
 	&& rm -rf /var/cache/yum/* \
 	&& rm -rf /tmp/epel-release-7-8.noarch.rpm \
