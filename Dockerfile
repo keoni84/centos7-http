@@ -63,6 +63,8 @@ RUN rpm --rebuilddb \
 	wget \
 	unzip \
 	make \
+	python-setuptools \
+	python-setuptools-devel \
 	&& rm -rf /var/cache/yum/* \
 	&& yum clean all
 
