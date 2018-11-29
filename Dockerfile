@@ -89,6 +89,11 @@ RUN sed -i \
 	/etc/ssh/sshd_config
 
 # -----------------------------------------------------------------------------
+# Enable services
+# -----------------------------------------------------------------------------
+RUN systemctl enable httpd.service && systemctl disable iptables && systemctl disable ip6tables && systemctl mask iptables && systemctl mask ip6tables
+
+# -----------------------------------------------------------------------------
 # Expose port 22
 # -----------------------------------------------------------------------------
 EXPOSE 22
