@@ -1,9 +1,9 @@
 # =============================================================================
 # 
-# CentOS-7.2.1511 - http/ssh
+# CentOS-latest - http/ssh
 # 
 # =============================================================================
-FROM centos:7.2.1511
+FROM centos:latest
 
 MAINTAINER John Headley <keoni84@gmail.com>
 
@@ -54,21 +54,21 @@ RUN rpm --rebuilddb \
 # -----------------------------------------------------------------------------
 # Copy files into place
 # -----------------------------------------------------------------------------
-ADD epel-release-7-8.noarch.rpm /tmp/
+ADD epel-release-latest-7.noarch.rpm /tmp/
 
 # -----------------------------------------------------------------------------
 # Import epel Repository
 # -----------------------------------------------------------------------------
-RUN rpm -ivh /tmp/epel-release-7-8.noarch.rpm
+RUN rpm -ivh /tmp/epel-release-latest-7.noarch.rpm
 
 # -----------------------------------------------------------------------------
 # Install sshpass
 # -----------------------------------------------------------------------------
 RUN rpm --rebuilddb \
 	&& yum -y install sshpass \
-	&& yum -y erase epel-release-7-8 \
+	&& yum -y erase epel-release-latest-7.noarch.rpm \
 	&& rm -rf /var/cache/yum/* \
-	&& rm -rf /tmp/epel-release-7-8.noarch.rpm \
+	&& rm -rf /tmp/epel-release-latest-7.noarch.rpm \
 	&& yum clean all
 
 # -----------------------------------------------------------------------------
